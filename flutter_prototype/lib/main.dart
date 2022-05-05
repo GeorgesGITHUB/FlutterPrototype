@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +24,13 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        fontFamily: 'SF Pro',
+        textTheme: Theme.of(context).textTheme.apply(
+          fontSizeDelta: 8 //hack way of increasing size
+        )
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const SettingsPage(),
+          //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
